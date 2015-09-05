@@ -4,7 +4,7 @@
 from os import rename, listdir
 import sys
 
-renameDir = "/var/www/rl/files"
+renameDir = "/var/www/rl/files/"
 
 def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
     fnames = listdir(renameDir)
@@ -12,7 +12,8 @@ def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
         if( fname.find(stringToBeReplaced) > -1 ):
             newName = fname.replace(stringToBeReplaced, stringToReplaceOld, 1)
             if( isPreview == False ): 
-                rename(fname, newName)
+                rename( renameDir+fname, renameDir+newName)
+                print renameDir+fname
             else:
                 print "  '" + fname+"' => '"+newName+"'"
 

@@ -11,7 +11,8 @@ renameDir = "/var/www/rl/files"
 def renameFiles(fname, isPreview):
     newName = stringPrefix + fname
     if( isPreview == True ):
-        rename(fname, newName)
+        rename( renameDir+fname, renameDir+newName)
+        print renameDir+fname
     else:
         print "  '" + fname+"' => '"+newName+"'"
 
