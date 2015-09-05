@@ -13,7 +13,7 @@ def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
             if( isPreview == False ): 
                 rename(fname, newName)
             else:
-                print "'" + fname+"' => '"+newName+"'"
+                print "  '" + fname+"' => '"+newName+"'"
 
 if( len(sys.argv) < 3 ):
     print "This script batch renames multiple files in current directory"

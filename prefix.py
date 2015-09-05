@@ -11,7 +11,7 @@ def renameFiles(fname, isPreview):
     if( isPreview == True ):
         rename(fname, newName)
     else:
-        print "'" + fname+"' => '"+newName+"'"
+        print "  '" + fname+"' => '"+newName+"'"
 
 def do_renameFiles(isPreview):
     fnames = listdir('.')
