@@ -13,7 +13,7 @@ fi
 
 numOfVidToUp=0
 for f in $var1; do
-	if [[ -e f ]]; then
+	if [[ -e $f ]]; then
 		echo $f
 		((numOfVidToUp++))
 	fi
