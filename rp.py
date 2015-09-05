@@ -18,7 +18,7 @@ def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
 
     for fname in fnames:
         if( fname.find(stringToBeReplaced) > -1 ):
-            newName = fname.replace(stringToBeReplaced, stringToReplaceOld, 1)
+            newName = fname.replace(stringToBeReplaced, stringToReplaceOld)
             if( isPreview == False ): 
                 rename( renameDir + fname, renameDir + newName)
                 #print renameDir+fname
