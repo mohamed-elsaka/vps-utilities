@@ -6,9 +6,12 @@
 from os import rename, listdir
 import sys
 
+global renameDir 
 renameDir = "/var/www/rl/files/"
 
 def renameFiles(fname, isPreview):
+    global renameDir 
+
     newName = stringPrefix + fname
     if( isPreview == True ):
         rename( renameDir+fname, renameDir+newName)
@@ -17,9 +20,10 @@ def renameFiles(fname, isPreview):
         print "  '" + fname+"' => '"+newName+"'"
 
 def do_renameFiles(isPreview):
+    global renameDir 
     
-    if( ! renameDir.endswith("/") ):
-        renameDir += "/"
+    if( not renameDir.endswith('/') ):
+        renameDir += '/'
 
     fnames = listdir(renameDir)
     for fname in fnames:
