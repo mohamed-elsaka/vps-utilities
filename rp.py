@@ -26,7 +26,7 @@ elif(len(sys.argv) == 3):
     stringToBeReplaced = sys.argv[1]
     stringToReplaceOld = sys.argv[2]
 
-    if(len(sys.argv == 4)):
+    if(len(sys.argv) == 4):
         renameDir = sys.argv[3]
     
     print "Will be renaming these files:"
