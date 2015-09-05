@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 # This script batch renames multiple files in current directory
 # Mainly for 
-
 from os import rename, listdir
 import sys
 
+renameDir = "/var/www/rl/files"
+
 def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
-    fnames = listdir('.')
+    fnames = listdir(renameDir)
     for fname in fnames:
         if( fname.find(stringToBeReplaced) > -1 ):
             newName = fname.replace(stringToBeReplaced, stringToReplaceOld, 1)
@@ -25,6 +26,9 @@ elif(len(sys.argv) == 3):
     stringToBeReplaced = sys.argv[1]
     stringToReplaceOld = sys.argv[2]
 
+    if(len(sys.argv == 4)):
+        renameDir = sys.argv[3]
+    
     print "Will be renaming these files:"
     renameFiles(stringToBeReplaced, stringToReplaceOld, True ) #isPreview = True
 
