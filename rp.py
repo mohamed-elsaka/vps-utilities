@@ -12,7 +12,7 @@ def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
     global renameDir
 
     if( not renameDir.endswith('/') ):
-    renameDir += '/'
+        renameDir += '/'
 
     fnames = listdir(renameDir)
 
@@ -40,7 +40,6 @@ elif(len(sys.argv) >= 3):
 
     if(len(sys.argv) == 4):
     print "args = 4"
-        #global renameDir 
     renameDir = sys.argv[3]
     
     print "Will be renaming these files:"
