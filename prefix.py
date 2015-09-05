@@ -50,13 +50,13 @@ elif(len(sys.argv) >= 3):
         renameDir = sys.argv[3]
     
     print "Will be renaming these files:"
-    do_renameFiles(False)
+    do_renameFiles(True)
 
     print "Are you sure u want to rename?y/n"
     reponseY = raw_input()
     
     if(reponseY == "y"):
-       do_renameFiles(True)
+       do_renameFiles(False)
        print "All files renamed!"
     else:
         print "Canceled by user!"
