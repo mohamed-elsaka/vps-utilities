@@ -6,10 +6,22 @@
 from os import rename, listdir
 import sys
 
-def renameFiles(fname):
+def renameFiles(fname, isPreview):
     newName = stringPrefix + fname
-    rename(fname, newName)
-    print "'" + fname+"' => '"+newName+"'"
+    if( isPreview == True ):
+        rename(fname, newName)
+    else:
+        print "'" + fname+"' => '"+newName+"'"
+
+def do_renameFiles(isPreview):
+    fnames = listdir('.')
+    for fname in fnames:
+        if(stringFind == "--serial"):
+            if(fname[0].isdigit() and fname[1].isdigit()):
+                renameFiles(fname, isPreview)
+
+        elif( fname.startswith(stringFind) ):
+                renameFiles(fname, isPreview)
 
 if( len(sys.argv) < 3 ):
     print "This script batch adds a prefix to multiple files in current directory"
@@ -24,15 +36,21 @@ elif(len(sys.argv) == 3):
     stringFind = sys.argv[1]
     stringPrefix = sys.argv[2]
 
-    fnames = listdir('.')
-    for fname in fnames:
-        if(stringFind == "--serial"):
-            if(fname[0].isdigit() and fname[1].isdigit()):
-                renameFiles(fname)
+    print "Will be renaming these files:"
+    do_renameFiles(False)
 
-        elif( fname.startswith(stringFind) ):
-                renameFiles(fname)
+    print "Are you sure u want to rename?y/n"
+    reponseY = raw_input()
+    
+    if(reponseY == "y"):
+       do_renameFiles(True)
+       print "All files renamed!"
+    else:
+        print "Canceled by user!"
 
 else:
     print "unknown error"
+
+
+
 
