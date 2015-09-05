@@ -13,7 +13,7 @@ def renameFiles(fname, isPreview):
     global renameDir 
 
     newName = stringPrefix + fname
-    if( isPreview == True ):
+    if( isPreview == False ):
         rename( renameDir+fname, renameDir+newName)
     else:
         print "  '" + fname+"' => '"+newName+"'"
