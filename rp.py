@@ -7,12 +7,17 @@ import sys
 renameDir = "/var/www/rl/files/"
 
 def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
+    
+    if( ! renameDir.endswith("/") ):
+        renameDir += "/"
+
     fnames = listdir(renameDir)
+
     for fname in fnames:
         if( fname.find(stringToBeReplaced) > -1 ):
             newName = fname.replace(stringToBeReplaced, stringToReplaceOld, 1)
             if( isPreview == False ): 
-                rename( renameDir+fname, renameDir+newName)
+                rename( renameDir + fname, renameDir + newName)
                 print renameDir+fname
             else:
                 print "  '" + fname+"' => '"+newName+"'"
@@ -23,7 +28,7 @@ if( len(sys.argv) < 3 ):
     print "ex 1: python rp.py \"--\" \"-\" "
     print "      converts \"name1--name2\" to \"name1-name2\" "
 
-elif(len(sys.argv) == 3):
+elif(len(sys.argv) >= 3):
     stringToBeReplaced = sys.argv[1]
     stringToReplaceOld = sys.argv[2]
 

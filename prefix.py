@@ -6,7 +6,7 @@
 from os import rename, listdir
 import sys
 
-renameDir = "/var/www/rl/files"
+renameDir = "/var/www/rl/files/"
 
 def renameFiles(fname, isPreview):
     newName = stringPrefix + fname
@@ -17,6 +17,10 @@ def renameFiles(fname, isPreview):
         print "  '" + fname+"' => '"+newName+"'"
 
 def do_renameFiles(isPreview):
+    
+    if( ! renameDir.endswith("/") ):
+        renameDir += "/"
+
     fnames = listdir(renameDir)
     for fname in fnames:
         if(stringFind == "--serial"):
