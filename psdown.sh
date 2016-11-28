@@ -6,6 +6,7 @@ first_course_url=$3
 if [[ $first_course_url = "-h" || $first_course_url = "" ]]; then 
         echo "pass username, password & course urls as example:"
         echo "psdown.sh username password \"https://app.pluralsight.com/library/courses/django-angularjs-web-development\" "
+        echo "psdown.sh username password -f ps_links_file.txt"
         exit 0;
 
 elif [[ $first_course_url = "-f" ]]; then
