@@ -7,7 +7,7 @@ from os import rename, listdir
 import sys
 
 global renameDir 
-renameDir = "/var/www/rl/files/"
+renameDir = "."
 
 def renameFiles(fname, isPreview):
     global renameDir 
