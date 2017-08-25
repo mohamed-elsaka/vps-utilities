@@ -16,7 +16,7 @@ eval 'pip install -U pip'
 echo "=================================";
 echo "Installing aria2 ...";
 echo "-----------------------------";
-eval "apt-get install aria2";
+eval "apt-get -y install aria2";
 
 echo "=================================";
 echo "Installing youtube-dl...";
