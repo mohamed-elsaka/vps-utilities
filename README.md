@@ -15,7 +15,7 @@ vps-init-setup.sh
 -------------------------------------------------------------
 => To download multiple files at same time:
 
-```aria2c -c -j10 -i urls.txt```
+```aria2c -c -x10 -j10 -i urls.txt```
 
 ```-c``` => continue non fininshed files.
 
