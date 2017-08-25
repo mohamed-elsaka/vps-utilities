@@ -8,12 +8,14 @@ Some python and bash scripts I use in my Linux sysadmin
 curl -L https://github.com/pythonoma/vps-utilities/raw/master/vps-init-setup.sh -o /usr/bin/vps-init-setup.sh
 
 chmod a+rx /usr/bin/vps-init-setup.sh 
+
+vps-init-setup.sh
 ```
 
 -------------------------------------------------------------
 => To download multiple files at same time:
 
-```aria2c -c -j=10 -i urls.txt```
+```aria2c -c -j10 -i urls.txt```
 
 ```-c``` => continue non fininshed files.
 
