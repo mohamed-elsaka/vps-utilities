@@ -14,6 +14,11 @@ eval 'apt-get -y install unzip python-pip';
 eval 'pip install -U pip'
 
 echo "=================================";
+echo "Installing aria2 ...";
+echo "-----------------------------";
+eval "apt-get install aria2";
+
+echo "=================================";
 echo "Installing youtube-dl...";
 echo "------------------------";
 eval 'curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl';
