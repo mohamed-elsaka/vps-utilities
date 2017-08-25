@@ -29,6 +29,22 @@ vps-init-setup.sh
 
 ```unzip '*.zip'```
 
+```rm *.zip```
+
+-------------------------------------------------------------
+=> Save folder structre to files-tree.txt:
+
+```tree . >> files-tree.txt```
+
+-------------------------------------------------------------
+=> Move all files in subfolders to main folder:
+
+```for d in */; do mv  "$d"* "$d"../;done```
+
+-------------------------------------------------------------
+=> (Optional) Remove all folders
+
+```rm -rf */```
 
 -------------------------------------------------------------
 => Upload to archive.org:
