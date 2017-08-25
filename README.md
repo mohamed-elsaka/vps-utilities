@@ -25,6 +25,12 @@ vps-init-setup.sh
 
 
 -------------------------------------------------------------
+=> Unzip multiple zip files at once:
+
+```unzip '*.zip'```
+
+
+-------------------------------------------------------------
 => Upload to archive.org:
 
 ```ia configure```
