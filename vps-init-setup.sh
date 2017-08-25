@@ -8,6 +8,11 @@ echo "-------------------";
 eval 'apt-get -y upgrade';
 
 echo "=================================";
+echo "Installing tree ...";
+echo "-----------------";
+eval "apt-get -y install tree";
+
+echo "=================================";
 echo "Installing pip & unzip ...";
 echo "-----------------";
 eval 'apt-get -y install unzip python-pip';
