@@ -30,6 +30,13 @@ echo "--------------------";
 eval 'curl -L https://github.com/pythonoma/vps-utilities/raw/master/rp.py -o /usr/bin/rp.py';
 eval 'chmod a+rx /usr/bin/rp.py';
 
+
+echo "=================================";
+echo "Installing prefix.py ...";
+echo "--------------------";
+eval 'curl -L https://github.com/pythonoma/vps-utilities/raw/master/prefix.py -o /usr/bin/prefix.py';
+eval 'chmod a+rx /usr/bin/prefix.py';
+
 echo "=================================";
 echo "Installing youtube-upload ...";
 echo "-----------------------------";
