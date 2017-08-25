@@ -34,8 +34,7 @@ echo "Installing rp.py ...";
 echo "--------------------";
 eval 'curl -L https://github.com/pythonoma/vps-utilities/raw/master/rp.py -o /usr/bin/rp.py';
 eval 'chmod a+rx /usr/bin/rp.py';
-
-
+ 
 echo "=================================";
 echo "Installing prefix.py ...";
 echo "--------------------";
@@ -55,6 +54,12 @@ eval 'cd ..';
 eval 'rm master.zip';
 eval 'rm -rf youtube-upload-master';
 
+echo "=================================";
+echo "Installing youtube-batch_up...";
+echo "------------------------";
+eval "curl -L https://github.com/pythonoma/vps-utilities/raw/master/youtube-batch_up.sh -o /usr/bin/youtube-batch_up.sh"
+eval "chmod a+rx /usr/bin/youtube-batch_up.sh"
+ 
 echo "=================================";
 echo "Installing internetarchive...";
 echo "-----------------------------";
