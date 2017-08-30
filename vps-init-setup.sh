@@ -28,6 +28,7 @@ echo "Installing youtube-dl...";
 echo "------------------------";
 eval 'curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl';
 eval 'chmod a+rx /usr/bin/youtube-dl';
+eval 'pip install -U youtube_dl'
 
 echo "=================================";
 echo "Installing rp.py ...";
