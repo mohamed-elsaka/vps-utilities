@@ -23,6 +23,11 @@ vps-init-setup.sh
 
 ```-i``` => file urls input file
 
+Or to batch download:
+
+```
+aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
+```
 
 -------------------------------------------------------------
 => Unzip multiple zip files at once:
