@@ -58,3 +58,19 @@ aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
 ```
  ia upload <identifier> *.* --metadata="mediatype:movies"
 ```
+
+
+Repeat command every X seconds:
+```
+while clear; do date; command;sleep 5; done
+```
+
+Monitor disk space:
+```
+while clear; do date; df -h;sleep 5; done
+```
+
+Monitor directory files count:
+```
+while clear; do date; find . - type f | wc - l ;sleep 5; done
+```
