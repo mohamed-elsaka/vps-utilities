@@ -72,5 +72,5 @@ while clear; do date; df -h;sleep 5; done
 
 Monitor directory files count:
 ```
-while clear; do date; find . - type f | wc - l ;sleep 5; done
+while clear; do date; find . -type f | wc -l ;sleep 5; done
 ```
