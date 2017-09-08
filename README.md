@@ -59,6 +59,22 @@ aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
  ia upload <identifier> *.* --metadata="mediatype:movies"
 ```
 
+youtube-dl:
+--------------------------------------------------------------
+
+Download Pluralsight course:
+```
+youtube-dl -u USERNAME -p PASSWORD -o "%(playlist)s/%(chapter_number)s. %(chapter)s/%(playlist_index)s. %(title)s.%(ext)s" --sleep-interval 40 COURSE_URL
+```
+
+Download Udemy course:
+```
+youtube-dl -u USERNAME -p PASSWORD -o '%(playlist)s/%(chapter_number)s.%(chapter)s-%(autonumber)s_%(title)s.%(ext)s' COURSE_URL
+```
+
+
+Misc:
+---------------------------------------------------------------
 
 Repeat command every X seconds:
 ```
