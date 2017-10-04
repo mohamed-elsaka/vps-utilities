@@ -93,10 +93,10 @@ while clear; do date; find . -type f | wc -l ;sleep 5; done
 
 Compress all videos using FFMPEG4
 ```
-for i in *.*; do eval "ffmpeg -i '${i}' -c:v libx264 -preset slow -crf 28 -c:a copy '${i}.mp4'"; done
+for i in *.*; do eval "ffmpeg -i '${i}' -c:v libx264 -preset slow -crf 28 -c:a copy '$(echo ${i} | cut -f 1 -d '.').mp4'"; done
 ```
 
 Compress all WAV audio files to M4A 
 ```
-for i in *.wav; do eval "ffmpeg -i '${i}'  -c:a aac -strict -2 -vbr 5 '${i}.m4a'"; done
-```
+for i in *.wav; do eval "ffmpeg -i '${i}'  -c:a aac -strict -2 -vbr 5 '$(echo ${i} | cut -f 1 -d '.').m4a'"; done
+ ```
