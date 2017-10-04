@@ -59,7 +59,8 @@ aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
  ia upload <identifier> *.* --metadata="mediatype:movies"
 ```
 
-youtube-dl:
+
+Youtube-dl:
 --------------------------------------------------------------
 
 Download Pluralsight course:
@@ -71,6 +72,21 @@ Download Udemy course:
 ```
 youtube-dl -u USERNAME -p PASSWORD -o '%(playlist)s/%(chapter_number)s.%(chapter)s-%(autonumber)s_%(title)s.%(ext)s' COURSE_URL
 ```
+
+
+FFMPEG4
+--------------------------------------------------------------
+
+Compress all videos using FFMPEG4
+```
+for i in *.*; do eval "ffmpeg -i '${i}' -c:v libx264 -preset slow -crf 28 -c:a copy '$(echo ${i} | cut -f 1 -d '.').mp4'"; done
+```
+
+Compress all WAV audio files to M4A 
+```
+for i in *.wav; do eval "ffmpeg -i '${i}'  -c:a aac -strict -2 -vbr 5 '$(echo ${i} | cut -f 1 -d '.').m4a'"; done
+ ```
+ 
 
 
 Misc:
@@ -91,12 +107,3 @@ Monitor directory files count:
 while clear; do date; find . -type f | wc -l ;sleep 5; done
 ```
 
-Compress all videos using FFMPEG4
-```
-for i in *.*; do eval "ffmpeg -i '${i}' -c:v libx264 -preset slow -crf 28 -c:a copy '$(echo ${i} | cut -f 1 -d '.').mp4'"; done
-```
-
-Compress all WAV audio files to M4A 
-```
-for i in *.wav; do eval "ffmpeg -i '${i}'  -c:a aac -strict -2 -vbr 5 '$(echo ${i} | cut -f 1 -d '.').m4a'"; done
- ```
