@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
 # This script batch renames multiple files in a directory
 # Mainly for 
 from os import rename, listdir
