@@ -89,6 +89,19 @@ for i in *.wav; do eval "ffmpeg -i '${i}'  -c:a aac -strict -2 -vbr 5 '$(echo ${
  
 
 
+Create 1G Swap memory file:
+---------------------------------------------------------------
+
+```
+sudo fallocate -l 1G /mnt/1GB.swap
+sudo mkswap /mnt/1GB.swap
+sudo swapon /mnt/1GB.swap
+sudo echo '/mnt/1GB.swap  none  swap  sw 0  0' >> /etc/fstab
+sudo swapon -s
+```
+ 
+
+
 Misc:
 ---------------------------------------------------------------
 
@@ -107,3 +120,7 @@ Monitor directory files count:
 while clear; do date; find . -type f | wc -l ;sleep 5; done
 ```
 
+Delete all ``*.ext`` files in subfolders:
+```
+find . - name \*.ext -type f -delete
+```
