@@ -122,5 +122,5 @@ while clear; do date; find . -type f | wc -l ;sleep 5; done
 
 Delete all ``*.ext`` files in subfolders:
 ```
-find . - name \*.ext -type f -delete
+find . - name *.ext -type f -delete
 ```
