@@ -13,6 +13,17 @@ vps-init-setup.sh
 ```
 
 -------------------------------------------------------------
+=> VNC install:
+
+```
+curl -L https://github.com/pythonoma/vps-utilities/raw/master/vncinstall.sh -o /usr/bin/vncinstall.sh
+
+chmod a+rx /usr/bin/vncinstall.sh 
+
+vncinstall.sh
+```
+
+-------------------------------------------------------------
 => To download multiple files at same time:
 
 ```aria2c -c -x10 -j10 -i urls.txt```
