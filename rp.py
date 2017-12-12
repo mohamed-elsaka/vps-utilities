@@ -45,10 +45,10 @@ elif(len(sys.argv) >= 3):
     print "Will be renaming these files:"
     renameFiles(stringToBeReplaced, stringToReplaceOld, True ) #isPreview = True
 
-    print "Are you sure u want to rename?y/n"
+    print "Are you sure u want to rename?[Y]/n"
     reponseY = raw_input()
     
-    if(reponseY == "y"):
+    if(reponseY == "y" or reponseY == ""):
         renameFiles(stringToBeReplaced, stringToReplaceOld, False) #isPreview = False
         print "All files renamed!"
     else:
