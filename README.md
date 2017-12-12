@@ -48,6 +48,11 @@ aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
 ```rm *.zip```
 
 -------------------------------------------------------------
+=> Replace spaces in all files in subfolders with underscore:
+
+```for d in */; do rp.py " " "_" "$d"/; done```
+
+-------------------------------------------------------------
 => Save folder structre to files-tree.txt:
 
 ```tree . >> files-tree.txt```
