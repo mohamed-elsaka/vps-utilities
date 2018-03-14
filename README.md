@@ -5,7 +5,7 @@ Some python and bash scripts I use in my Linux sysadmin
 => VPS initial setup:
 
 ```
-wget https://github.com/pythonoma/vps-utilities/raw/master/vps-init-setup.sh chmod +x vps-init-setup.sh && ./vps-init-setup.sh
+wget https://github.com/pythonoma/vps-utilities/raw/master/vps-init-setup.sh && chmod +x vps-init-setup.sh && ./vps-init-setup.sh
 
 ```
 
