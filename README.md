@@ -5,22 +5,16 @@ Some python and bash scripts I use in my Linux sysadmin
 => VPS initial setup:
 
 ```
-curl -L https://github.com/pythonoma/vps-utilities/raw/master/vps-init-setup.sh -o /usr/bin/vps-init-setup.sh
+wget https://github.com/pythonoma/vps-utilities/raw/master/vps-init-setup.sh chmod +x vps-init-setup.sh && ./vps-init-setup.sh
 
-chmod a+rx /usr/bin/vps-init-setup.sh 
-
-vps-init-setup.sh
 ```
 
 -------------------------------------------------------------
 => VNC install:
 
 ```
-curl -L https://github.com/pythonoma/vps-utilities/raw/master/vncinstall.sh -o /usr/bin/vncinstall.sh
+wget https://github.com/pythonoma/vps-utilities/raw/master/vncinstall.sh && chmod +x vncinstall.sh && ./vncinstall.sh
 
-chmod a+rx /usr/bin/vncinstall.sh 
-
-vncinstall.sh
 ```
 
 -------------------------------------------------------------
@@ -72,7 +66,7 @@ aria2c -c -x10 -j10 -Z -P 'http://example.com/[0-100].mp3'
 
 ```ia configure```
 ```
- ia upload <identifier> *.* --metadata="mediatype:movies"
+ ia upload <identifier> *.* --retries 50 --metadata="mediatype:movies"
 ```
 
 
@@ -109,11 +103,8 @@ Create 1G Swap memory file:
 ---------------------------------------------------------------
 
 ```
-sudo fallocate -l 1G /mnt/1GB.swap
-sudo mkswap /mnt/1GB.swap
-sudo swapon /mnt/1GB.swap
-sudo echo '/mnt/1GB.swap  none  swap  sw 0  0' >> /etc/fstab
-sudo swapon -s
+sudo fallocate -l 1G /mnt/1GB.swap && sudo mkswap /mnt/1GB.swap && sudo swapon /mnt/1GB.swap && sudo echo '/mnt/1GB.swap none swap sw 0 0' >> /etc/fstab && sudo swapon -s
+
 ```
  
 
