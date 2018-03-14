@@ -127,7 +127,7 @@ Monitor directory files count:
 while clear; do date; find . -type f | wc -l ;sleep 5; done
 ```
 
-Delete all ``*.ext`` files in subfolders:
+Delete all ``*.srt`` files in subfolders:
 ```
-find . - name *.ext -type f -delete
+find . -name *.srt -type f -delete
 ```
