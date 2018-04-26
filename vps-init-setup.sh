@@ -24,6 +24,17 @@ echo "-----------------------------";
 eval "apt-get -y install aria2";
 
 echo "=================================";
+echo "Installing renamer ...";
+echo "-----------------";
+eval 'sudo npm install -g renamer';
+
+echo "=================================";
+echo "Installing sanitize-filenames ...";
+echo "------------------------";
+eval 'curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/sanitize-filenames.sh -o /usr/bin/sanitize-filenames';
+eval 'chmod a+rx /usr/bin/sanitize-filenames';
+
+echo "=================================";
 echo "Installing youtube-dl...";
 echo "------------------------";
 eval 'curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/bin/youtube-dl';
