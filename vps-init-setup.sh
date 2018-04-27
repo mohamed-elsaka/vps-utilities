@@ -16,6 +16,7 @@ echo "=================================";
 echo "Installing pip, npm & unzip ...";
 echo "-----------------";
 eval 'apt-get -y install unzip npm python-pip';
+eval "ln -s /usr/bin/nodejs /usr/bin/node";
 eval 'pip install -U pip'
 
 echo "=================================";
