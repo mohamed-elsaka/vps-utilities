@@ -13,9 +13,9 @@ echo "-----------------";
 eval "apt-get -y install tree";
 
 echo "=================================";
-echo "Installing pip & unzip ...";
+echo "Installing pip, npm & unzip ...";
 echo "-----------------";
-eval 'apt-get -y install unzip python-pip';
+eval 'apt-get -y install unzip npm python-pip';
 eval 'pip install -U pip'
 
 echo "=================================";
