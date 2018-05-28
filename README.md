@@ -17,6 +17,15 @@ wget https://github.com/pythonoma/vps-utilities/raw/master/vncinstall.sh && chmo
 
 ```
 
+
+-------------------------------------------------------------
+=> ia_downloader install:
+
+```
+curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia_downloader.py -o /usr/bin/ia_downloader';
+eval 'chmod a+rx /usr/bin/ia_downloader';
+```
+
 -------------------------------------------------------------
 => To download multiple files at same time:
 
