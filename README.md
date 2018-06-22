@@ -19,10 +19,10 @@ wget https://github.com/pythonoma/vps-utilities/raw/master/vncinstall.sh && chmo
 
 
 -------------------------------------------------------------
-=> ia_downloader install:
+=> ia-downloader install:
 
 ```
-sudo curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia_downloder.py -o /usr/bin/ia_downloader && sudo chmod a+rx /usr/bin/ia_downloader
+sudo curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia-downloder.py -o /usr/bin/ia-downloader && sudo chmod a+rx /usr/bin/ia-downloader
 ```
 
 -------------------------------------------------------------
