@@ -26,8 +26,8 @@ else
 	exit 1;
 fi
 
-read -p "do you want to upload them?y/n: " response
-if [[ ! $response = "y" ]]; then
+read -p "do you want to upload them?[Y]/n: " response
+if [[ ! $response = "y" && ! $response = "" ]]; then
 	exit 1;
 fi
 
