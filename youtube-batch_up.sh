@@ -39,10 +39,10 @@ for f in $var1; do
         f_esc=$(printf '%q' "$f");
         #echo $f_esc;
         eval "touch \"$cred\"";
-        command="youtube-upload --privacy=\"unlisted\" --playlist=\"$playlist\" --credentials-file=\"$cred\"  -t \"$f_no_ext\" $$
-        echo $command
-        #eval $command
+        command="youtube-upload --privacy=\"unlisted\" --playlist=\"$playlist\" --credentials-file=\"$cred\"  -t \"$f_no_ext\" $f_esc"
+        #echo $command
+        eval $command
         ((numOfVidUploaded++))
         sleep 5
-done
+done 
 echo "Uploaded $numOfVidUploaded/$numOfVidToUp"
