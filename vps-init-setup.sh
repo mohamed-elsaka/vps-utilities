@@ -57,7 +57,7 @@ eval 'chmod a+rx /usr/bin/prefix.py';
 echo "=================================";
 echo "Installing youtube-upload ...";
 echo "-----------------------------";
-eval 'pip install --upgrade google-api-python-client progressbar2';
+eval 'pip install --upgrade google-api-python-client progressbar2 oauth2client';
 eval 'wget https://github.com/tokland/youtube-upload/archive/master.zip';
 eval 'unzip master.zip';
 eval 'cd youtube-upload-master';
