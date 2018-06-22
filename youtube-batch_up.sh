@@ -1,6 +1,6 @@
 #!/bin/bash 
 cred="$HOME/.youtube-batch_up-creds"
-echo "$cred";
+#echo "$cred";
 playlist="$2"
 
 echo "videos to upload:"
@@ -34,12 +34,12 @@ fi
 
 numOfVidUploaded=0
 for f in $var1; do
-        echo $f
+        #echo $f
         f_esc=$(printf '%q' "$f");
-        echo $f_esc;
+        #echo $f_esc;
         eval "touch \"$cred\"";
         command="youtube-upload --privacy=\"unlisted\" --playlist=\"$playlist\" --credentials-file=\"$cred\"  -t \"$f\" $f_esc"
-        echo $command
+        #echo $command
         eval $command
         ((numOfVidUploaded++))
         sleep 5
