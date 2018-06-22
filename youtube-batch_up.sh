@@ -35,13 +35,14 @@ fi
 numOfVidUploaded=0
 for f in $var1; do
         #echo $f
+        f_no_ext="${f%.*}";
         f_esc=$(printf '%q' "$f");
         #echo $f_esc;
         eval "touch \"$cred\"";
-        command="youtube-upload --privacy=\"unlisted\" --playlist=\"$playlist\" --credentials-file=\"$cred\"  -t \"$f\" $f_esc"
-        #echo $command
-        eval $command
+        command="youtube-upload --privacy=\"unlisted\" --playlist=\"$playlist\" --credentials-file=\"$cred\"  -t \"$f_no_ext\" $$
+        echo $command
+        #eval $command
         ((numOfVidUploaded++))
         sleep 5
-done 
+done
 echo "Uploaded $numOfVidUploaded/$numOfVidToUp"
