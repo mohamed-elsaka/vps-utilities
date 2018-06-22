@@ -77,3 +77,10 @@ echo "=================================";
 echo "Installing internetarchive...";
 echo "-----------------------------";
 eval 'pip install internetarchive';
+
+echo "=================================";
+echo "Installing ia-downloader...";
+echo "-----------------------------";
+eval 'sudo curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia-downloder.py -o /usr/bin/ia-downloader && sudo chmod a+rx /usr/bin/ia-downloader';
+
+
