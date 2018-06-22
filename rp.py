@@ -7,6 +7,18 @@ import sys
 global renameDir 
 renameDir = "."
 
+def matching_files_exist_in_dir(stringToBeReplaced, dir):
+    if( not dir.endswith('/') ):
+        dir += '/'
+
+    fnames = listdir(dir)
+
+    for fname in fnames:
+        if( fname.find(stringToBeReplaced) > -1 ):
+          return True
+    return False
+
+
 def renameFiles(stringToBeReplaced, stringToReplaceOld, isPreview):
 
     global renameDir
@@ -42,17 +54,18 @@ elif(len(sys.argv) >= 3):
         print "args = 4"
         renameDir = sys.argv[3]
     
-    print "Will be renaming these files:"
-    renameFiles(stringToBeReplaced, stringToReplaceOld, True ) #isPreview = True
+    if matching_files_exist_in_dir(stringToBeReplaced, renameDir):
+      print "Will be renaming these files:"
+      renameFiles(stringToBeReplaced, stringToReplaceOld, True ) #isPreview = True
 
-    print "Are you sure u want to rename?[Y]/n"
-    reponseY = raw_input()
-    
-    if(reponseY == "y" or reponseY == ""):
-        renameFiles(stringToBeReplaced, stringToReplaceOld, False) #isPreview = False
-        print "All files renamed!"
-    else:
-        print "Canceled by user!"
+      print "Are you sure u want to rename?[Y]/n"
+      reponseY = raw_input()
+      
+      if(reponseY == "y" or reponseY == ""):
+          renameFiles(stringToBeReplaced, stringToReplaceOld, False) #isPreview = False
+          print "All files renamed!"
+      else:
+          print "Canceled by user!"
 
 else:
     print "unknown error"
