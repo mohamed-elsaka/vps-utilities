@@ -67,11 +67,11 @@ def main(argv):
     try:
       opts, args = getopt.getopt(argv,"hi:j:x:",["ia_item_id=","max_concurrent_downloads=", "max_connections_per_server="])
     except getopt.GetoptError:
-        print 'ia_downloader.py -i <ia_item_id>'
+        print 'ia-downloader.py -i <ia_item_id>'
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'ia_downloader.py -i <ia_item_id>'
+            print 'ia-downloader.py -i <ia_item_id>'
             sys.exit()
         elif opt in ("-i", "--ia_item_id"):
             ia_item_id = arg
@@ -102,4 +102,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         main(sys.argv[1:])
     else:
-        print 'ia_downloader.py -i <ia_item_id>'
+        print 'ia-downloader.py -i <ia_item_id>'
