@@ -88,7 +88,7 @@ youtube-dl -u USERNAME -p PASSWORD -o "%(playlist)s/%(chapter_number)s. %(chapte
 
 Download Udemy course:
 ```
-youtube-dl -u USERNAME -p PASSWORD -o '%(playlist)s/%(chapter_number)s.%(chapter)s-%(autonumber)s_%(title)s.%(ext)s' COURSE_URL
+youtube-dl -u USERNAME -p PASSWORD -o '%(playlist)s/%(chapter_number)s.%(chapter)s/%(playlist_index)s_%(title)s.%(ext)s' COURSE_URL
 ```
 
 
