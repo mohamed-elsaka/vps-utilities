@@ -29,7 +29,7 @@ sudo curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia
 => ps_grabber install:
 
 ```
-git clone https://bitbucket.org/islamona2008/pluralsight_grabber.git && cd pluralsight_grabber/ && virtualenv --python=python2 ve && cd ve && source bin/activate && pip install selenium requests && cd .. && python main.py
+sudo apt-get install -y virtualenv && wget https://github.com/mozilla/geckodriver/releases/download/v0.21.0/geckodriver-v0.21.0-linux64.tar.gz && tar xvzf geckodriver-v0.21.0-linux64.tar.gz && cp geckodriver /usr/bin/geckodriver && chmod +x /usr/bin/geckodriver && git clone https://bitbucket.org/islamona2008/pluralsight_grabber.git && cd pluralsight_grabber/ && virtualenv --python=python2 ve && cd ve && source bin/activate && pip install selenium requests && cd .. && python main.py
 
 ```
 
