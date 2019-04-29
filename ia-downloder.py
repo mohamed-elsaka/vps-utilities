@@ -35,6 +35,7 @@ def generate_urls_file_for_aria2(ia_item_id, original_files_urls):
         original_file_url_full = original_file_url_base + '/' + original_file_url
         output += original_file_url_full
         output += "\n \t out=" + original_file_url + " \n" 
+        output = output.encode('ascii', 'replace')
 
         txt = "Got " + str(index+1) + "/" + str(len(original_files_urls)) + " urls"
         sys.stdout.write("\r%s" % txt)
