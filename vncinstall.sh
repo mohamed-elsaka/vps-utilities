@@ -1,5 +1,5 @@
 eval "sudo apt-get -y update";
-eval "sudo apt install -y xfce4 xfce4-goodies tightvncserver midori handbrake filezilla deluge unrar unzip"; 
+eval "sudo apt install -y xfce4 xfce4-goodies tightvncserver firefox handbrake filezilla deluge unrar unzip p7zip"; 
 eval "vncserver";
 eval "vncserver -kill :1";
 eval "sleep 4s";
