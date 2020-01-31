@@ -83,4 +83,8 @@ echo "Installing ia-downloader...";
 echo "-----------------------------";
 eval 'sudo curl -L https://raw.githubusercontent.com/pythonoma/vps-utilities/master/ia-downloder.py -o /usr/bin/ia-downloader && sudo chmod a+rx /usr/bin/ia-downloader';
 
+"=================================";
+echo "Installing 7z...";
+echo "-----------------------------";
+eval 'sudo apt install p7zip';
 
