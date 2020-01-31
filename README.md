@@ -147,3 +147,9 @@ Delete all ``*.srt`` files in subfolders:
 ```
 find . -name *.srt -type f -delete
 ```
+
+Compress all videos in folder to 7z:
+```
+for i in *.mp4; do eval "7z a '${i}'.7z '${i}' -pVersyStrongBuzzword"; done
+```
+
